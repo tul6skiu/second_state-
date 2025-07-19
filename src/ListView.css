@@ -1,0 +1,80 @@
+.list-view {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;           /* Список в линию */
+  gap: 1px;               /* Расстояние между элементами */
+  flex-wrap: wrap;         /* Чтобы переносились на следующую строку, если не помещаются */
+}
+
+.shop-item {
+  background-color: #f7f7f7;
+  min-width: 200px;        /* Минимальная ширина карточки */
+  width: 100%;      
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;           /* Переключаем на горизонтальный флекс */
+  flex-direction: row;     /* Горизонтальное расположение содержимого */
+  align-items: center;     /* Вертикальное выравнивание по центру */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+}
+
+.shop-item img {
+  width: 120px;
+  height: 100px;
+  object-fit: cover;       /* Чтобы изображение не искажалось */
+  flex-shrink: 0;          /* Защита от сжимания */
+  margin-right: 15px;      /* Отступ справа от картинки */
+}
+
+.shop-item h3, 
+.shop-item p {
+  margin: 0;
+  text-align: left;        /* Выравнивание текста влево, так как теперь горизонтальная сетка */
+}
+
+.shop-item > div {
+  flex-grow: 1;              /* Занять всё доступное пространство */
+  display: flex;             /* Включаем flex */
+  justify-content: space-between; /* Распределяем элементы по ширине с отступами */
+  align-items: center;       /* Выравнивание по вертикали по центру */
+  gap: 10px;                 /* Отступы между элементами, если надо */
+}
+.shop-item h3 {
+  font-size: 20px;
+  margin-bottom: 0px;
+  font-weight: 600;
+}
+
+.product-color {
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.price {
+  font-size: 24px;
+  color: red;
+  margin-bottom: 4px;
+}
+
+.btn-cart {
+  border: 2px solid red;       /* Контур 2 пикселя */
+  border-radius: 9999px;          /* Большой радиус => овальная форма */
+  padding: 8px 20px;              /* Вертикальный и горизонтальный отступ */
+  background-color: transparent;  /* Прозрачный фон */
+  cursor: pointer;                /* Курсор меняется на «руку» */
+  font-weight: bold;              /* Жирный шрифт */
+  font-size: 14px;                /* Размер шрифта */
+  align-self: flex-start;
+  color: red;
+  transition: background-color 0.2s, color 0.2s; /* Анимация при наведении */
+}
+
+.btn-cart:hover {
+  background-color: red;        /* Цвет фона при наведении */
+  color: white;                   /* Цвет текста при наведении */
+}
+

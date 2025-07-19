@@ -1,0 +1,12 @@
+.material-icons {
+  font-size: 36px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.icon-switch-wrapper {
+  position: absolute;
+  top: 10px;   /* отступ сверху */
+  right: 10px; /* отступ справа */
+  /* cursor:pointer внутри IconSwitch */
+}
